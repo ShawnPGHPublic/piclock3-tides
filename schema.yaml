@@ -3,16 +3,46 @@ description: >
   Uses api.tidesandcurrents.noaa.gov.  No API key.
 
 settings:
-  station:           {is: string}
-  datum:             {is: string}
-  height-units:      {is: string}
-  refresh:           {is: number, unit: minutes, range: [5, 1440]}
-  fill-color:        {is: color}
-  fill-opacity:      {is: number, range: [0, 1]}
-  now-color:         {is: color}
-  high-color:        {is: color}
-  low-color:         {is: color}
-  footer-height:     {is: size}
-  footer-font-size:  {is: font-size}
-  time-format:       {is: strftime}
-  show-station:      {is: boolean}
+  station:           
+    is: string
+    help: The NOAA station ID, such as 8720218.  Empty picks the station nearest the clock's location.
+  datum:      
+    is: string
+    help: data source type
+  height-units:
+    is: string
+    help: tide height display (metric or feet)
+  refresh:
+    is: number
+    unit: minutes
+    range: [5, 1440]
+    help: minutes between NOAA fetches
+  fill-color:
+    is: color 
+    help: background color of tidal wave
+  fill-opacity:
+    is: number
+    range: [0, 1]
+    help: how much of clock background to let through
+  now-color:
+    is: color
+    help: verticle line color for at moment tide
+  high-color:
+    is: color
+    help: color of high tide indicator
+  low-color:
+    is: color
+    help: color of low tide indicator
+  footer-height:
+    is: size
+    help: height of the bottom footer display tide text info
+  footer-font-size:
+    is: font-size
+    help: font used on footer
+  time-format:
+    is: strftime
+    help: how time displayed in footer
+  show-station:
+    is: boolean
+    help: set to show the station that data came from
+    

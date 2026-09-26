@@ -11,7 +11,12 @@ No API key.
 ## Install
 
 cd ~/PiClock3
+
 git clone https://github.com/ShawnPGHPublic/piclock3-tides plugins/Tides    
+
+## Test
+
+python3 PyQtPiClock3.py examples/FLTides.yam
 
 ## What you see
 
@@ -33,6 +38,7 @@ to location.latitude / location.longitude.
 2. Set `location` to the coast you care about, or set `station` to a [NOAA station id](https://tidesandcurrents.noaa.gov/stations.html?type=Tide+Predictions).
 
 The example location is Daytona Beach; NOAA should resolve a nearby prediction station automatically. For a known gauge, set station (for example Daytona-area ids around 8720218 / 8720211 — confirm on the NOAA station map for the exact gauge you want).
+
 
 
 

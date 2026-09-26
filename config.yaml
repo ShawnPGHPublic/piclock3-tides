@@ -5,7 +5,7 @@ kind: tides
 station: ""
 
 datum: MLLW
-units: feet          # feet | meters
+height-units: feet          # feet | meters
 refresh: 30          # minutes between NOAA fetches
 
 # curve
