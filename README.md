@@ -10,25 +10,12 @@ No API key.
 
 ## Install
 
-From the PiClock3 checkout:
+cd ~/PiClock3
+git clone https://github.com/ShawnPGHPublic/piclock3-tides plugins/Tides    
 
-```bash
-mkdir -p plugins/tides
-# copy the plugin files into plugins/tides/
-python3 PyQtPiClock3.py plugins/tides/examples/tides.yaml
+## What you see
 
-Set in your config:
-widgets:
-  tides:
-    plugin: plugins.tides
-    region: bottom
-    station: "8720218"    # optional NOAA id
-    
-If station is empty, the plugin picks the nearest tidepredictions station
-to location.latitude / location.longitude.
-
-What you seeMost of the box: today’s predicted water level (6-minute NOAA series,
-cubic-smoothed), filled under the curve.
+Most of the box: today’s predicted water level (6-minute NOAA series,cubic-smoothed), filled under the curve.
 Dashed gold line: now.
 Dots: published high and low tides.
 Footer: station name and the next highs/lows with clock time and height.
@@ -39,13 +26,11 @@ units: feet or meters.  Heights use datum MLLW unless you change datum.
 
 ### Use it
 
-1. Put the files in `plugins/tides/` next to `Config.yaml`.
-2. Point a widget at `plugin: plugins.tides` and a `region` (the example uses `bottom`).
-3. Set `location` to the coast you care about, or set `station` to a [NOAA station id](https://tidesandcurrents.noaa.gov/stations.html?type=Tide+Predictions).
+If station is empty, the plugin picks the nearest tide predictions station
+to location.latitude / location.longitude.
 
-```bash
-python3 PyQtPiClock3.py plugins/tides/examples/tides.yaml --check
-python3 PyQtPiClock3.py plugins/tides/examples/tides.yaml
+1. Point a widget at `plugin: plugins.tides` and a `region` (the example uses `bottom`).
+2. Set `location` to the coast you care about, or set `station` to a [NOAA station id](https://tidesandcurrents.noaa.gov/stations.html?type=Tide+Predictions).
 
 The example location is Daytona Beach; NOAA should resolve a nearby prediction station automatically. For a known gauge, set station (for example Daytona-area ids around 8720218 / 8720211 — confirm on the NOAA station map for the exact gauge you want).
 
