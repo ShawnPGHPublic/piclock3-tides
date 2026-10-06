@@ -133,26 +133,6 @@ widgets:
       latitude:  28.3218         # Orlando
       longitude:  -81.2244
 
-  radar3:
-    plugin: PiClock3.MapLoop
-    region: radars.1
-    base-provider: mapbox        # or googlemaps, if that is the key you got
-    frame-provider: librewxr     # or rainviewer
-    zoom: 7
-    center:
-      latitude: '{location.latitude}'
-      longitude: '{location.longitude}'
-
-  radar4:
-    plugin: PiClock3.MapLoop
-    region: radars.2
-    base-provider: mapbox        # or googlemaps, if that is the key you got
-    frame-provider: librewxr     # or rainviewer
-    zoom: 11
-    center:
-      latitude: '{location.latitude}'
-      longitude: '{location.longitude}'
-
 logging-level: debug
 
 apikeys: !include ApiKeys.yaml
