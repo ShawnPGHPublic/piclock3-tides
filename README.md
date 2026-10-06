@@ -12,7 +12,7 @@ No API key.
 
 cd ~/PiClock3
 
-git clone https://github.com/ShawnPGHPublic/piclock3-tides plugins/Tides    
+git clone https://github.com/ShawnPGHPublic/piclock3-tides plugins/tides    
 
 ## Test
 
