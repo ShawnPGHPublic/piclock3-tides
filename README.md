@@ -16,7 +16,7 @@ git clone https://github.com/ShawnPGHPublic/piclock3-tides plugins/Tides
 
 ## Test
 
-python3 PyQtPiClock3.py examples/FLTides.yam
+python3 PyQtPiClock3.py plugins/tides/examples/FLTides.yam
 
 ## What you see
 

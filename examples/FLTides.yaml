@@ -130,7 +130,7 @@ widgets:
     label-outline: true
     zoom: 5
     center:
-      latitude:  28.3218	# Orlando
+      latitude:  28.3218         # Orlando
       longitude:  -81.2244
 
   radar3:
