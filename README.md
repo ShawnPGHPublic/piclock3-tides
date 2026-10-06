@@ -10,14 +10,14 @@ No API key.
 
 ## Install
 
+```
 cd ~/PiClock3
-
 git clone https://github.com/ShawnPGHPublic/piclock3-tides plugins/tides    
-
+```
 ## Test
-
+```
 python3 PyQtPiClock3.py plugins/tides/examples/FLTides.yaml
-
+```
 ## What you see
 
 Most of the box: today’s predicted water level (6-minute NOAA series,cubic-smoothed), filled under the curve.
@@ -39,7 +39,15 @@ to location.latitude / location.longitude.
 
 The example location is Daytona Beach; NOAA should resolve a nearby prediction station automatically. For a known gauge, set station (for example Daytona-area ids around 8720218 / 8720211 — confirm on the NOAA station map for the exact gauge you want).
 
-
-
+```
+  # Add Tide clock here
+  tides:
+    plugin: plugins.tides
+    region: model
+    station: "8721120"   # optional; Daytona Beach Shores/ nearby NOAA id
+    height-units: feet
+    footer-height: 0.14
+    footer-font-size: 0.38
+```
 
 
